@@ -10,7 +10,7 @@ The input file will begin with single line for comments, which shall be ignored 
 Each subsequent line is guaranteed to contain a _command_, and one or more _arguments_. The possible commands are as follows:
 - `RECTANGLE [height] [width]` - draws a _filled_ rectangle of asterisks of height `height` and width `width`.
 - `TRIANGLE [height]` - draws a _filled_ triangle (with tip pointing upward) of asterisks of height `height`.
-- `DIAMOND [width]` - draws a _hollow_ diamond of asterisks of width `width`. `width` will always be odd or zero.
+- `DIAMOND [sidelength]` - draws a _hollow_ diamond of asterisks of side length `sidelength`.
 
 You may assume that:
 - Any command which is not one of the above can be safely ignored.
@@ -29,12 +29,13 @@ Sample Input File (`input.data`):
 This is a sample input file
 RECTANGLE 6 4
 TRIANGLE 5
-DIAMOND 3
+DIAMOND 2
 SQUARE 4
 RECTANGLE 1 10
 DIAMOND 1
 TRIANGLE 2
-DIAMOND 5
+DIAMOND 3
+DIAMOND 0
 ```
 
 Sample Output 1:
@@ -89,6 +90,8 @@ Please enter a file name: input.data
  * *
   *
 
+
+
 ```
 
 Sample Output File 2 (`output.txt`)
@@ -122,5 +125,7 @@ Sample Output File 2 (`output.txt`)
 *   *
  * *
   *
+
+
 
 ```
